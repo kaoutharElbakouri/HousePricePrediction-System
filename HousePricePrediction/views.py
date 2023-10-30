@@ -30,6 +30,6 @@ def result(request):
     var5 = float(request.GET['n5'])
     pred = model.predict(np.array([var1,var2,var3,var4,var5]).reshape(1,-1))
     pred = round(pred[0])
-    price = "the predicted price is $"+str(pred)
+    price = "the predicted price is here is $"+str(pred)
     
     return render(request,'predict.html', {"result2":price})
